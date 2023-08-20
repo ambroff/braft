@@ -165,7 +165,7 @@ protected:
     PosixDirReader(const std::string& path) : _dir_reader(path.c_str()) {}
 
 private:
-    butil::DirReaderPosix _dir_reader;
+    mutable butil::DirReaderPosix _dir_reader;
 };
 
 class PosixFileAdaptor : public FileAdaptor {
